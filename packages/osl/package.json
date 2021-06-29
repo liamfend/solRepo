@@ -4,7 +4,7 @@
   "description": "osl cli quick start project",
   "main": "./bin/osl.js",
   "bin": {
-    "osl": "osl.js"
+    "osl": "./bin/osl.js"
   },
   "scripts": {
     "test1": "export INTERNAL_TEST=__test__  &&   node ./bin/osl.js start",
