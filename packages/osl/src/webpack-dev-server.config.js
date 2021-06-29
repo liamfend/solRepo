@@ -9,12 +9,10 @@ const initailConfig = (port, appPublic) => {
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
     https: false, // true for self-signed, object for cert authority
     noInfo: true, // only errors & warns on hot reload
-    publicPath: appPublicPathUrl.length>1?appPublicPathUrl.slice(0,-1):appPublicPathUrl,
-   // contentBasePublicPath:  appPublicPathUrl,
-    quiet: true,
+    publicPath: appPublicPathUrl.length>1?appPublicPathUrl.slice(0,-1):appPublicPathUrl, 
+    // quiet: false,  
   }
-}
- 
+} 
 //https://www.npmjs.com/package/get-port
 //https://www.npmjs.com/package/portfinder
 //暂时不加动态选择端口，晚点考虑添加使用环境变量区分

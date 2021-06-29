@@ -21,6 +21,7 @@ const postcssNormalize = require('postcss-normalize')
 const safePostCssParser = require('postcss-safe-parser')
 const oslConfig = require('./utils/mergeOslConfig')
 const getCSSModuleLocalIdent = require('./utils/getCSSModuleLocalIdent')
+const InterpolateHtmlPlugin = require('./utils/InterpolateHtmlPlugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
@@ -96,7 +97,7 @@ module.exports = function (webpackEnv) {
   }
 
   return {
-    // stats: 'minimal',
+    stats: 'minimal',
     mode: webpackEnv,
     bail: isEnvProduction,
     devtool: isEnvProduction ? 'source-map' : isEnvDevelopment && 'cheap-module-source-map',
@@ -251,7 +252,8 @@ module.exports = function (webpackEnv) {
       }, {}),
     },
     plugins: [
-      // isEnvDevelopment && new WebpackBar(),
+      isEnvDevelopment && new WebpackBar(),
+      
       isEnvProduction && new CleanWebpackPlugin(),
       new HtmlWebpackPlugin(
         Object.assign(
@@ -295,7 +297,8 @@ module.exports = function (webpackEnv) {
         }),
       isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin(env.stringified),
-      //  isEnvProduction &&
+      new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+      isEnvProduction &&
       new MiniCssExtractPlugin({
         filename: 'static/css/[name].[contenthash:8].css',
         chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',

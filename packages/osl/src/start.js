@@ -57,6 +57,7 @@ const devServerOptions = Object.assign({}, devServerConfig, {
 const server = new WebpackDevServer(compiler, devServerOptions)
 
 compiler.hooks.invalid.tap('invalid', () => {
+  
   console.log('Compiling...')
 })
 
@@ -64,8 +65,7 @@ server.listen(DEFAULT_PORT, 'localhost', err => {
   if (err) {
     return console.log(err)
   }
-  console.log(chalk.cyan('Starting the development server...\n'))
-  //   console.log('Starting server on http://localhost:3000')
+  console.log(chalk.cyan('Starting the development server...\n')) 
 })
 let isFirstCompile = true
 compiler.hooks.done.tap('done', async stats => {
@@ -82,7 +82,7 @@ compiler.hooks.done.tap('done', async stats => {
   //   //     console.log(chalk.green('Compiled successfully!'))
   //   //   }
   printInstructions(
-    'CMS',
+    'OSL',
     {
       lanUrlForTerminal: `http://localhost:${DEFAULT_PORT}${process.env.PUBLIC_URL||''}`,
       localUrlForTerminal: `http://localhost:${DEFAULT_PORT}${process.env.PUBLIC_URL||''}`,
