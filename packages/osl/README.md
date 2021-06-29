@@ -9,5 +9,6 @@ You can install any package that you have permission to view. Authenticate to Gi
 To authenticate by adding your personal access token to your ~/.npmrc file, edit the ~/.npmrc file for your project to include the following line, replacing TOKEN with your personal access token. Create a new ~/.npmrc file if one doesn't exist.
 
 ```bash
-//npm.pkg.github.com/:\_authToken=TOKEN @liamfend:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:\_authToken=TOKEN
+@liamfend:registry=https://npm.pkg.github.com
 ```
