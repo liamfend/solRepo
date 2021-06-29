@@ -4,7 +4,7 @@ module.exports = {
       plugins:[]
     },
     resolve: {
-      
+      alias:{},
       fallback: {},
     },
     webpackPlugins: [],

@@ -243,12 +243,13 @@ module.exports = function (webpackEnv) {
         },
       ],
     },
-    // resolve: {
-    //   ...oslConfig.resolve,
-    //   alias: Object.keys(oslConfig.resolve.alias).map(k =>
-    //     path.resolve(appBase, oslConfig.resolve.alias(k)),
-    //   ),
-    // },
+    resolve: {
+      ...oslConfig.resolve,
+      alias: Object.keys(oslConfig.resolve.alias).reduce((a, k) => {
+        a[k] = path.resolve(appBase, oslConfig.resolve.alias[k])
+        return a
+      }, {}),
+    },
     plugins: [
       // isEnvDevelopment && new WebpackBar(),
       isEnvProduction && new CleanWebpackPlugin(),

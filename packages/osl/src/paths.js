@@ -22,7 +22,7 @@ const appSrc = path.resolve(appBase, 'src')
 const appPublic = path.resolve(appBase, process.env.INTERNAL_TEST,'public')
 const appHtmlTemp = path.resolve(appBase, 'public/index.html')
 const oslConfigPath = path.resolve(appBase, '.oslrc.js')
-const appPublicPathUrl = process.env.PUBLIC_URL ||    './'
+const appPublicPathUrl = process.env.PUBLIC_URL || '/'
 
 module.exports = {
   appBase,
