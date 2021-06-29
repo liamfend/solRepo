@@ -7,8 +7,7 @@
     "osl": "osl.js"
   },
   "scripts": {
-    "test1": "export INTERNAL_TEST=__test__  &&   node ./bin/osl.js start",
-    "test": "export INTERNAL_TEST=test &&   node ./src/start"
+    "test1": "export INTERNAL_TEST=__test__  &&   node ./bin/osl.js start"
   },
   "repository": {
     "type": "git",
