@@ -19,7 +19,7 @@ const resolveModule = filePath => {
 const appOutputBuild = path.resolve(appBase, 'build')
 const appSrcJs = resolveModule(path.resolve(appBase, 'src/index'))
 const appSrc = path.resolve(appBase, 'src')
-const appPublic = path.resolve(appBase, process.env.INTERNAL_TEST,'public')
+const appPublic = path.resolve(appBase, process.env.INTERNAL_TEST || '', 'public')
 const appHtmlTemp = path.resolve(appBase, 'public/index.html')
 const oslConfigPath = path.resolve(appBase, '.oslrc.js')
 const appPublicPathUrl = process.env.PUBLIC_URL || '/'
