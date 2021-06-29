@@ -1,0 +1,34 @@
+query {
+  getClientSecret(input: ______) {
+    clientSecret
+  }
+}
+query {
+  getPayments(listingId: ______) {
+    deposit {
+      amount
+      benefactor
+      beneficiary
+      currency
+      description
+      paymentProcessingFee
+      paymentType
+      ruleCalculationType
+      ruleCalculationValue
+      ruleId
+    }
+    paymentProcessingFee {
+      amount
+      benefactor
+      beneficiary
+      currency
+      description
+      paymentProcessingFee
+      paymentType
+      ruleCalculationType
+      ruleCalculationValue
+      ruleId
+    }
+    total
+  }
+}
