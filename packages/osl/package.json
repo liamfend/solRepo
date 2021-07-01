@@ -7,8 +7,7 @@
     "osl": "./bin/osl.js"
   },
   "scripts": {
-    "test1": "export INTERNAL_TEST=__test__  &&   node ./bin/osl.js start",
-    "_prepare": "husky install"
+    "test1": "export INTERNAL_TEST=__test__  &&   node ./bin/osl.js start"
   },
   "repository": {
     "type": "git",
@@ -69,24 +68,8 @@
     "react-dom": "^17.0.2"
   },
   "lint-staged": {
-    "./src/**/*.js": "eslint --cache --fix",
+    "packages/**/src/**/*.js": "eslint --cache --fix",
     "**/*": "prettier --write --ignore-unknown",
-    "*.scss": "stylelint ./src/**/*.scss --fix"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "eslint": "^7.29.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.2",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "packages/**/*.scss": "stylelint ./src/**/*.scss --fix"
   }
 }
