@@ -46,7 +46,9 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
           scope: '@liamfend'
+      - run: git config --global user.email liamfend@github.com
+      - run: git config --global user.name  ci
       - run: yarn install
-      - run: npx lerna publish   --yes
+      - run: npx lerna publish  --yes
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH }}
