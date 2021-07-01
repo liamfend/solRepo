@@ -47,6 +47,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@liamfend'
       - run: yarn install
-      - run: npm lerna publish
+      - run: npx lerna publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
