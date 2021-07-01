@@ -1,18 +1,16 @@
 {
-  "packages": [
-    "packages/*"
-  ], 
-  "useWorkspaces" : true ,
+  "packages": ["packages/*"],
+  "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "independent",
-  "command":{
-    "publish":{
+  "command": {
+    "publish": {
       "allowBranch": "master",
-      "conventionalCommits": true, 
+      "conventionalCommits": true,
       "exact": true
     },
     "version": {
-      "conventionalCommits": true  
+      "conventionalCommits": true
     }
   }
 }
