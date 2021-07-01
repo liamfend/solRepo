@@ -51,7 +51,6 @@ jobs:
       - name: Check NPM authentication
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_PUBLISH }}" >> .npmrc
-          npm whoami
       - run: yarn install
       - run: npx lerna publish  --yes
         env:
