@@ -1,5 +1,8 @@
 {
   "name": "@liamfend/osl",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "1.0.5",
   "description": "osl cli quick start project",
   "main": "./bin/osl.js",
@@ -11,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liamfend/osl.git"
+    "url": "git+https://github.com/liamfend/solRepo.git"
   },
   "keywords": [],
   "author": "",
@@ -21,9 +24,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liamfend/osl/issues"
+    "url": "https://github.com/liamfend/solRepo/issues"
   },
-  "homepage": "https://github.com/liamfend/osl#readme",
+  "homepage": "https://github.com/liamfend/solRepo#readme",
   "dependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
