@@ -1,5 +1,5 @@
 {
-  "name": "osl",
+  "name": "osl-tools",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@liamfend"
   },
