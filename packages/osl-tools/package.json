@@ -1,7 +1,7 @@
 {
   "name": "osl-tools",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@liamfend"
+    "registry": "https://npm.pkg.github.com"
   },
   "version": "1.0.7",
   "description": "osl cli quick start project",
