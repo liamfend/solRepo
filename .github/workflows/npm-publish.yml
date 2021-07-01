@@ -50,7 +50,7 @@ jobs:
           scope: '@liamfend'
       - run: git config --global user.email 398389303@qq.com
       - run: git config --global user.name  liam.li
-      - run: npx lerna publish  --yes
+      - run: npx lerna publish  --yes --no-verify-access
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
