@@ -51,9 +51,6 @@ jobs:
       - run: git config --global user.email 398389303@qq.com
       - run: git config --global user.name  liam.li
       - name: Check NPM authentication
-        # run: |
-        #   echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_PUBLISH }}" >> .npmrc
-      - run: yarn install
       - run: npx lerna publish  --yes
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN }}
