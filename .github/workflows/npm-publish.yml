@@ -41,6 +41,8 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GIT_PUSH }}
       - uses: actions/setup-node@v2
         with:
           node-version: 14
@@ -49,10 +51,11 @@ jobs:
       - run: git config --global user.email 398389303@qq.com
       - run: git config --global user.name  liam.li
       - name: Check NPM authentication
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_PUBLISH }}" >> .npmrc
+        # run: |
+        #   echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_PUBLISH }}" >> .npmrc
       - run: yarn install
       - run: npx lerna publish  --yes
         env:
+          GH_TOKEN:
           NPM_TOKEN: ${{secrets.NPM_PUBLISH }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
