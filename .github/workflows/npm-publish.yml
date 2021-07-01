@@ -48,6 +48,8 @@ jobs:
           scope: '@liamfend'
       - run: git config --global user.email 398389303@qq.com
       - run: git config --global user.name  liam.li
+          env:
+            NPM_PUBLISH:${{secrets.NPM_PUBLISH }}
       - run: yarn install
       - run: npx lerna publish  --yes
         env:
