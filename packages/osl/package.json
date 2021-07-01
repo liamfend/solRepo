@@ -1,6 +1,6 @@
 {
   "name": "@liamfend/osl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "osl cli quick start project",
   "main": "./bin/osl.js",
   "bin": {
