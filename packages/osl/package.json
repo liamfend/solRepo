@@ -1,6 +1,6 @@
 {
   "name": "@liamfend/osl",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "osl cli quick start project",
   "main": "./bin/osl.js",
   "bin": {
@@ -19,6 +19,9 @@
     "bin",
     "src"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/liamfend/osl/issues"
