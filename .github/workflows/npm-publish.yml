@@ -51,4 +51,5 @@ jobs:
       - run: yarn install
       - run: npx lerna publish  --yes
         env:
+          NPM_TOKEN: ${{secrets.NPM_PUBLISH }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
