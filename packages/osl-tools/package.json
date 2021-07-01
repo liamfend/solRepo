@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@liamfend"
   },
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "osl cli quick start project",
   "main": "./bin/osl.js",
   "bin": {
